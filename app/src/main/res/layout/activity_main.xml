@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Qibla"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Locate Qibla position..."
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/compassContainer"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtDegree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Background kompas -->
+        <ImageView
+            android:id="@+id/compassBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/kompas"
+            android:contentDescription="@string/app_name" />
+
+        <!-- Jarum Kaabah -->
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/jarum"
+            android:scaleType="centerInside"
+            android:contentDescription="@string/app_name" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtOffsetLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Offset: 0°"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/compassContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekOffset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:max="60"
+        app:layout_constraintTop_toBottomOf="@id/txtOffsetLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="-1°"
+        android:backgroundTint="@color/islamic_green"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/seekOffset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="+1°"
+        android:backgroundTint="@color/islamic_green"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/seekOffset"
+        app:layout_constraintStart_toEndOf="@id/btnMinus"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgCalibrate"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/calibrate"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/btnPlus"
+        app:layout_constraintBottom_toTopOf="@id/txtReminder1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtReminder1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" &#8734; Make sure to calibrate at least 8 times for optimal accuracy."
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        android:layout_marginBottom="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
