@@ -18,10 +18,14 @@ Accuracy may vary based on environmental interference and device hardware capabi
 
 ## 📸 Screenshots
 <p align="center">
-  <img src="" width="50%" height="70%" />
+  <img src="https://raw.githubusercontent.com/suaji/Qibla-Locator-Android/refs/heads/main/Screenshots/before.jpg" width="50%" height="70%" />
 </p>
 <br>
 <p align="center">
-  <img src="" width="50%" height="70%" />
+  <img src="https://raw.githubusercontent.com/suaji/Qibla-Locator-Android/refs/heads/main/Screenshots/after.jpg" width="50%" height="70%" />
+</p>
+<br>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/suaji/Qibla-Locator-Android/refs/heads/main/Screenshots/virus_scan.jpg" width="50%" height="70%" />
 </p>
 <br>
