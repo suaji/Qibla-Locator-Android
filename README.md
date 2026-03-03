@@ -22,7 +22,7 @@ Accuracy may vary based on environmental interference and device hardware capabi
 </p>
 <br>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/suaji/Qibla-Locator-Android/refs/heads/main/Screenshots/after.jpg" width="50%" height="70%" />
+  <img src="https://raw.githubusercontent.com/suaji/Qibla-Locator-Android/refs/heads/main/Screenshots/after2.jpg" width="50%" height="70%" />
 </p>
 <br>
 <p align="center">
